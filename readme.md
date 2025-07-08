@@ -25,20 +25,21 @@ Projeto desenvolvido durante a Imersão DevOps da Alura em parceria com o Google
 
 ## 📂 Estrutura do Projeto
 
-**imersao-devops-ambiente-docker/**
-
-|-- .dockerignore          # Lista de arquivos e pastas para o Docker ignorar durante o build da imagem.
-|-- .gitignore             # Lista de arquivos e pastas para o Git ignorar (não enviar ao repositório).
-|-- Dockerfile             # "Receita" passo a passo para construir a imagem Docker da sua aplicação.
-|-- docker-compose.yml     # Orqaaaauestrador para definir e rodar os serviços da aplicação (ex: a API, um banco de dados).
-|-- requirements.txt       # Lista todas as bibliotecas Python que o projeto precisa para funcionar.
-|-- README.md              # Documentação principal do projeto (o que é, como instalar, como usar).
-|-- escola.db              # Arquivo do banco de dados SQLite.
-|
-|-- app.py                 # Ponto de entrada principal da aplicação, onde o servidor web é iniciado.
-|-- database.py            # Módulo para configurar a conexão com o banco de dados.
-|-- models.py              # Define a estrutura das tabelas do banco de dados como classes Python (ex: SQLAlchemy).
-|-- schemas.py             # Define a estrutura dos dados de entrada e saída da API (ex: Pydantic).
-|
-|-- /routers/              # Pasta que organiza os diferentes grupos de rotas (endpoints) da sua API.
-|                            (ex: alunos_router.py, cursos_router.py)
+```
+imersao-devops-ambiente-docker/
+├── .dockerignore        # Ignora arquivos no build do Docker
+├── .gitignore           # Ignora arquivos no versionamento do Git
+├── Dockerfile           # Receita para construir a imagem da aplicação
+├── docker-compose.yml   # Orquestrador dos serviços (API, DB, etc.)
+├── requirements.txt     # Dependências Python do projeto
+├── README.md            # Documentação principal
+├── escola.db            # Banco de dados SQLite (desenvolvimento)
+│
+├── app.py               # Ponto de entrada da aplicação (FastAPI)
+├── database.py          # Configuração e sessão do banco de dados
+├── models.py            # Modelos de dados da aplicação (tabelas)
+├── schemas.py           # Schemas para validação e serialização de dados
+│
+└── /routers/            # Pasta com os endpoints/rotas da API
+    └── ... (ex: alunos_router.py, cursos_router.py)
+```
