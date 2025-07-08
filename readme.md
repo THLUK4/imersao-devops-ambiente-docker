@@ -12,7 +12,7 @@ Projeto desenvolvido durante a Imersão DevOps da Alura em parceria com o Google
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/THLUK4/imersao-devops-ambiente-docker.git](https://github.com/seu-usuario/imersao-devops-ambiente-docker.git)
+    git clone https://github.com/THLUK4/imersao-devops-ambiente-docker.git
     cd imersao-devops-ambiente-docker
     ```
 
