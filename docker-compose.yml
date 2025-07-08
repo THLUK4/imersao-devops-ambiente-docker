@@ -1,0 +1,25 @@
+services:
+  # Serviço da sua aplicação FastAPI.
+  app:
+    build: . # Constrói a imagem a partir do Dockerfile no diretório atual (`.`).
+    container_name: l0ki-api # Nome do contêiner para fácil identificação.
+    ports:
+      - "8000:8000" # Mapeia a porta 8000 do seu computador (host) para a porta 8000 do contêiner.
+    volumes:
+      - .:/app # Monta o diretório atual do projeto no diretório /app dentro do contêiner.
+      # Isso é ótimo para desenvolvimento, pois permite que as alterações no código sejam refletidas instantaneamente no contêiner.
+  api:
+    # Constrói a imagem a partir do Dockerfile no diretório atual (`.`).
+    # O Docker Compose encontrará e usará seu `Dockerfile` existente.
+    build: .
+    # Mapeia a porta 8000 do seu computador (host) para a porta 8000 do contêiner.
+    ports:
+      - "8000:8000"
+    
+    volumes:
+      - .:/app
+    # Monta o diretório atual do projeto no diretório /app dentro do contêiner.
+    # Isso é essencial para que o --reload do uvicorn funcione, pois as alterações
+    # no seu código local serão refletidas instantaneamente no contêiner.
+    # Também garante que o banco de dados `escola.db` seja salvo no seu computador.
+   
